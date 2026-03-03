@@ -1,0 +1,41 @@
+# Binaries
+bin/
+dist/
+mt
+mt.exe
+
+# Dependencies
+vendor/
+
+# Go test outputs
+*.test
+*.out
+coverage.txt
+profile.out
+
+# Environment variables
+.env
+.env.local
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local data files (optional)
+data/*.jsonl
+!data/.gitkeep
+
+# Temporary files
+tmp/
+*.log
+
+PROJECT_OVERVIEW.md
+TECH_STACK.md
+TODO.md
