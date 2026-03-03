@@ -8,6 +8,7 @@ import (
 	"bufio"
 	"encoding/json"
 	"os"
+	"path/filepath"
 	"time"
 
 	"digital-receipt-task/internal/domain"
@@ -130,6 +131,11 @@ func AssignEphemeralIDs(tasks []*domain.Task) {
 // SaveTasks writes the entire task slice to a JSONL file using event sourcing.
 // It appends CREATE or UPDATE operations for each task.
 func SaveTasks(filePath string, tasks []*domain.Task) error {
+	// Ensure parent directory exists
+	if err := os.MkdirAll(filepath.Dir(filePath), 0755); err != nil {
+		return err
+	}
+
 	file, err := os.OpenFile(filePath, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		return err
@@ -153,6 +159,11 @@ func SaveTasks(filePath string, tasks []*domain.Task) error {
 
 // AppendOperation appends a single operation to the event log.
 func AppendOperation(filePath string, op Operation) error {
+	// Ensure parent directory exists
+	if err := os.MkdirAll(filepath.Dir(filePath), 0755); err != nil {
+		return err
+	}
+
 	file, err := os.OpenFile(filePath, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		return err
