@@ -3,6 +3,9 @@ bin/
 dist/
 mt
 mt.exe
+siap
+siap.exe
+*.exe
 
 # Dependencies
 vendor/
