@@ -58,6 +58,7 @@ brews:
     repository:
       owner: iman1704
       name: siap
+      branch: main
       token: "{{ .Env.GITHUB_TOKEN }}"
     test: |
       system "#{bin}/siap --version"
