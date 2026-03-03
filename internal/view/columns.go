@@ -45,7 +45,7 @@ func (c *DescColumn) Render(task *domain.Task, width int) string {
 	descWidth := runewidth.StringWidth(desc)
 
 	if descWidth <= width {
-		return desc
+		return padRight(desc, width)
 	}
 
 	// Truncate with ellipsis
@@ -110,7 +110,7 @@ func (c *TagsColumn) Render(task *domain.Task, width int) string {
 	tagsWidth := runewidth.StringWidth(tags)
 
 	if tagsWidth <= width {
-		return tags
+		return padRight(tags, width)
 	}
 
 	// Truncate if too long
