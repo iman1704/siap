@@ -49,15 +49,15 @@ release:
 
     Released by [GoReleaser](https://github.com/goreleaser/goreleaser).
 
-brews:
+homebrew_casks:
   - name: siap
     description: "Siap: a cli todo list written in Go"
     homepage: "https://github.com/iman1704/siap"
     license: "MIT"
-    directory: Formula
+    directory: Casks
     repository:
       owner: iman1704
-      name: siap
+      name: homebrew-tap
       branch: main
       token: "{{ .Env.GITHUB_TOKEN }}"
     test: |
