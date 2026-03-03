@@ -52,12 +52,12 @@ release:
 brews:
   - name: siap
     description: "Siap: a cli todo list written in Go"
-    homepage: "https://github.com/mohamadiman/digital-receipt-task"
+    homepage: "https://github.com/mohamadiman/siap"
     license: "MIT"
     directory: Formula
     repository:
       owner: mohamadiman
-      name: homebrew-tap
+      name: siap
       token: "{{ .Env.GITHUB_TOKEN }}"
     test: |
       system "#{bin}/siap --version"
