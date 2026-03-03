@@ -52,11 +52,11 @@ release:
 brews:
   - name: siap
     description: "Siap: a cli todo list written in Go"
-    homepage: "https://github.com/mohamadiman/siap"
+    homepage: "https://github.com/iman1704/siap"
     license: "MIT"
     directory: Formula
     repository:
-      owner: mohamadiman
+      owner: iman1704
       name: siap
       token: "{{ .Env.GITHUB_TOKEN }}"
     test: |
