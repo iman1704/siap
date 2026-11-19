@@ -1,0 +1,33 @@
+# Rust build output
+/target/
+*.pdb
+
+# Local Cargo home used by this workspace
+/.cargo-home/
+
+# rustfmt backups
+*.rs.bk
+
+# macOS
+.DS_Store
+._*
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Local working notes
+spec-update.md
+
+.dsh/*
+mockups/
+
+TODO.md

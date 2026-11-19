@@ -1,0 +1,17 @@
+[package]
+name = "siapv2"
+version = "0.1.0"
+edition = "2021"
+description = "siap — opinionated taskwarrior TUI mockup (taskwarrior-tui stack: Rust + ratatui + crossterm)"
+license = "MIT"
+
+[[bin]]
+name = "siapv2"
+path = "src/main.rs"
+
+[dependencies]
+ratatui = "0.29"
+crossterm = "0.28"
+serde_json = "1"
+chrono = "0.4"
+nucleo-matcher = "0.3.1"
